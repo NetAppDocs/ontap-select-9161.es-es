@@ -173,10 +173,7 @@ La siguiente tabla proporciona el tipo de licencia mínimo requerido para el alm
 2+| Compatibilidad con hipervisor (VMware) 3+| VMware vSphere 7.0GA y actualizaciones 1 a 3C VMware vSphere 8.0GA y actualizaciones 1 a 3 
 
 
-2+| Compatibilidad con hipervisor (KVM) 3+| RedHat Enterprise Linux de 64 bits (KVM) 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6 Rocky Linux (KVM) 9 y 8 
-
-
-2+| Software de gestión 3+| Suite de gestión NetApp Active IQ Unified Manager Utilidad de implementación ONTAP Select SnapCenter (opcional) 
+2+| Compatibilidad con hipervisor (KVM) 3+| RedHat Enterprise Linux 64-bit (KVM) 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6 Rocky Linux (KVM) KVM en Rocky Linux 9.5, 9.4, 9.3, 9.2, 9.1, 9.0, 8.9, 8.8, 8.7 y 8.6 
 |===
 --
 ====
