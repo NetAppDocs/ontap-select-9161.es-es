@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_cli_deploy_image_add.html 
 keywords: administer, administering, cli, deploy, ontap select image, add 
-summary: Agrega una imagen de ONTAP Select a tu instancia de la utilidad de administración Deploy. Después de la instalación, puedes usarla al desplegar un clúster ONTAP Select. 
+summary: Puedes añadir una imagen de ONTAP Select a tu instancia de la utilidad de administración Deploy. Después de instalar la imagen, puedes usarla al desplegar un clúster de ONTAP Select. 
 ---
 = Agregar una imagen de ONTAP Select para implementar
 :hardbreaks:
@@ -14,9 +14,20 @@ summary: Agrega una imagen de ONTAP Select a tu instancia de la utilidad de admi
 
 
 [role="lead"]
-Agrega una imagen de ONTAP Select a tu instancia de la utilidad de administración Deploy. Después de que la imagen se haya instalado, puedes usarla al desplegar un clúster ONTAP Select.
+Puedes añadir una imagen de ONTAP Select a tu instancia de la utilidad de administración Deploy. Después de instalar la imagen, puedes usarla al desplegar un clúster de ONTAP Select.
 
-.Antes de empezar
+
+
+== Antes de empezar
+
+A grandes rasgos, el proceso utilizado para añadir una imagen ONTAP Select a una instancia de Deploy consta de cuatro pasos:
+
+. Descargando la imagen de instalación
+. Cargando la imagen de instalación en la máquina virtual de despliegue
+. Agregar la imagen de instalación
+. Mostrando las imágenes de instalación disponibles
+
+
 Antes de agregar nuevas imágenes de ONTAP Select para implementar, primero debe eliminar cualquier imagen innecesaria.
 
 
@@ -24,36 +35,45 @@ NOTE: Solo debe agregar una imagen de ONTAP Select con una versión anterior a l
 
 
 
-== Paso 1: descarga la imagen de instalación
+== Descarga la imagen de instalación
 
 Para comenzar a agregar una imagen de ONTAP Select a una instancia de la utilidad de implementación, debe descargar la imagen de instalación del sitio de soporte de NetApp . La imagen de instalación de ONTAP Select está formateada como un único archivo comprimido.
 
 .Pasos
-. Accede a la página link:https://mysupport.netapp.com/site/downloads/["NetApp Support Site descargas"^].
-. Desplázate hacia abajo y selecciona *ONTAP Select Image*.
-. Selecciona la versión que quieres de la imagen de instalación.
-. Revise el Acuerdo de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.
-. Selecciona y descarga el paquete *ONTAP Select Image Install* adecuado. Responde a todas las preguntas según sea necesario.
+. Accede al NetApp Support Site usando un navegador web y haz clic en *Support Quick Links*.
+. Haz clic en *Download Software* en *Top Tasks* e inicia sesión en el sitio.
+. Haz clic en *Find your product*.
+. Desplázate hacia abajo y haz clic en *ONTAP Select*.
+. En *Other Available Select Software* haz clic en *Deploy Upgrade, Node Upgrade, Image Install*.
+. Selecciona la versión deseada del paquete de actualización.
+. Revisa el contrato de licencia de usuario final (EULA) y haz clic en *Aceptar y continuar*.
+. Selecciona y descarga el paquete adecuado, respondiendo a todas las indicaciones necesarias para tu entorno.
 
 
 
 
-== Paso 2: Sube la imagen de instalación a Deploy
+== Sube la imagen de instalación a Deploy
 
 Después de adquirir la imagen de instalación de ONTAP Select , debe cargar el archivo en la máquina virtual de implementación.
 
 .Antes de empezar
-Verifica que tienes el archivo de imagen de instalación disponible en tu estación de trabajo local. También debes tener la contraseña de la cuenta de usuario administrador de Deploy.
+Debes tener el archivo de imagen de instalación disponible en tu estación de trabajo local. También debes tener la contraseña de la cuenta de usuario administrador de Deploy.
 
 .Acerca de esta tarea
 Esta tarea describe un método para cargar el archivo a la máquina virtual de implementación. Es posible que existan otras opciones más adecuadas para su entorno.
 
 .Paso
-. En una terminal de comandos en tu estación de trabajo local, sube el archivo de imagen a la máquina virtual Deploy, como se muestra en los siguientes ejemplos:
+. En una terminal de comandos en tu estación de trabajo local, sube el archivo de imagen a la máquina virtual de Deploy.
++
+Ejemplo
+
 +
 ....
 scp image_v_93_install_esx.tgz admin@10.234.81.101:/home/admin (provide password when prompted)
 ....
++
+Ejemplo
+
 +
 ....
 sftp admin@10.234.81.101 (provide password when prompted)
@@ -67,9 +87,9 @@ El archivo de instalación del nodo se almacena en el directorio de inicio del u
 
 
 
-== Paso 3: agrega la imagen de instalación
+== Agrega la imagen de instalación
 
-Agrega la imagen de instalación de ONTAP Select al directorio de imágenes de Deploy para que esté disponible al implementar un nuevo clúster.
+Puedes agregar la imagen de instalación de ONTAP Select al directorio Deploy images para que esté disponible al desplegar un nuevo cluster.
 
 .Antes de empezar
 Debe saber en qué directorio se encuentra el archivo de imagen de instalación en la máquina virtual de la utilidad de implementación. Se asume que el archivo se encuentra en el directorio de inicio del administrador.
@@ -78,21 +98,20 @@ Debe saber en qué directorio se encuentra el archivo de imagen de instalación 
 . Sign in en la CLI de la utilidad de implementación usando SSH con la cuenta de administrador (admin).
 . Inicie el shell Bash:
 +
-[source, cli]
-----
-shell bash
-----
-. Coloca el archivo de imagen de instalación en el directorio images, como se muestra en el siguiente ejemplo:
+`shell bash`
+
+. Coloca el archivo de imagen de instalación en el directorio de imágenes.
 +
+Ejemplo
 `tar -xf image_v_93_install_esx.tgz -C /opt/netapp/images/`
 
 
 
 
 
-== Paso 4: muestra las imágenes de instalación disponibles
+== Mostrar las imágenes de instalación disponibles
 
-Muestra las imágenes de ONTAP Select que están disponibles al desplegar un nuevo clúster.
+Puedes ver las imágenes de ONTAP Select que están disponibles al desplegar un nuevo cluster.
 
 .Pasos
 . Acceda a la página web de documentación en línea en la máquina virtual de la utilidad de implementación e inicie sesión con la cuenta de administrador (admin):
@@ -102,7 +121,7 @@ Muestra las imágenes de ONTAP Select que están disponibles al desplegar un nue
 +
 Utilice el nombre de dominio o la dirección IP de la máquina virtual de implementación.
 
-. Ve hasta el final de la página y selecciona *Deploy* y luego selecciona *GET /images*.
-. Selecciona *¡Pruébalo!* para ver las imágenes disponibles de ONTAP Select.
+. Ve hasta la parte inferior de la página y haz clic en *Deploy* y luego en *GET /images*.
+. Haz clic en *Pruébalo* para ver las imágenes disponibles de ONTAP Select.
 . Confirme que la imagen deseada esté disponible.
 
