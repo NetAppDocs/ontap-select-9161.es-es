@@ -14,48 +14,44 @@ summary: Puede actualizar una máquina virtual de utilidad de implementación ex
 
 
 [role="lead"]
-Puede actualizar una máquina virtual de utilidad de implementación existente en el lugar mediante la interfaz de línea de comandos.
+Actualiza una máquina virtual existente de la utilidad ONTAP Select Deploy in situ usando la CLI de la utilidad ONTAP Select Deploy.
 
-
-
-== Antes de empezar
-
-Asegúrese de que Deploy no se utilice para realizar otras tareas durante la actualización. Consulte las notas de la versión actual para obtener información y conocer las restricciones sobre la actualización de la utilidad Deploy.
+.Antes de empezar
+Verifica que ONTAP Select Deploy no se use para realizar ninguna otra tarea durante la actualización. Consulta la link:reference_release_notes.html["notas de la versión"] para información y restricciones sobre la actualización de la utilidad ONTAP Select Deploy.
 
 
 NOTE: Si tiene instalada una instancia anterior de la utilidad de administración ONTAP Select Deploy, debe actualizarla a la versión actual. El nodo ONTAP Select y el componente ONTAP Select Deploy se actualizan de forma independiente. Consulte link:concept_adm_upgrading_nodes.html["Actualizar los nodos ONTAP Select"^] Para más detalles.
 
 
 
-== Descargar el paquete de actualización
+== Paso 1: descarga el paquete de actualización
 
-Para iniciar el proceso de actualización, debe descargar el archivo de actualización de la máquina virtual de implementación correspondiente desde el sitio de soporte de NetApp . El paquete de actualización está en un único archivo comprimido.
+Para comenzar el proceso de actualización, descarga el archivo de actualización de ONTAP Select Deploy desde el sitio de soporte de NetApp. El paquete de actualización está formateado como un solo archivo comprimido.
 
 .Pasos
-. Acceder a la link:https://mysupport.netapp.com/site/["Sitio de soporte de NetApp"^] utilizando un navegador web y seleccione *Descargas* en el menú Descargas.
-. Desplácese hacia abajo y seleccione * ONTAP Select Deploy Upgrade*.
-. Seleccione la versión deseada del paquete de actualización.
+. Accede a la página link:https://mysupport.netapp.com/site/downloads/["NetApp Support Site descargas"^].
+. Desplázate hacia abajo y selecciona *ONTAP Select Deploy*.
+. Selecciona la versión de ONTAP Select que quieras.
 . Revise el Acuerdo de licencia de usuario final (EULA) y seleccione *Aceptar y continuar*.
-. Seleccione y descargue el paquete apropiado, respondiendo a todas las indicaciones según sea necesario para su entorno.
+. Selecciona y descarga el paquete *ONTAP Select Deploy Upgrade* adecuado. Responde a todas las preguntas según sea necesario.
 
 
 
 
-== Subir el paquete a la máquina virtual de implementación
+== Paso 2: sube el paquete a la máquina virtual ONTAP Select Deploy
 
-Después de adquirir el paquete de actualización, debe cargar el archivo en la máquina virtual de implementación.
+Después de descargar el paquete, necesitas subir el archivo a la máquina virtual de ONTAP Select Deploy.
 
 .Antes de empezar
-Debe tener el archivo de actualización disponible en su estación de trabajo local. También debe tener la contraseña de la cuenta de administrador.
+* Verifica que el archivo de actualización esté disponible en tu estación de trabajo local.
+* Verifica que tienes la contraseña de la cuenta de usuario administrador.
 
-.Acerca de estas tareas
-Esta tarea describe un método para cargar el archivo a la máquina virtual de implementación. Es posible que existan otras opciones más adecuadas para su entorno.
+
+.Acerca de esta tarea
+Esta tarea describe un método para cargar el archivo en la máquina virtual ONTAP Select Deploy. Puede que haya otras opciones más adecuadas para tu entorno.
 
 .Pasos
-. En un shell de comandos en su estación de trabajo local, use la utilidad scp para cargar el archivo de imagen en la máquina virtual de implementación.
-+
-Ejemplo
-
+. En una terminal de comandos en tu estación de trabajo local, usa la utilidad  `scp` (Secure Copy Protocol) para subir el archivo de imagen a la máquina virtual ONTAP Select Deploy, como se muestra en el siguiente ejemplo:
 +
 ....
 scp ONTAPdeploy2.12_upgrade.tar.gz admin@10.228.162.221:/home/admin (provide password when prompted)
@@ -67,21 +63,25 @@ El archivo de actualización se almacena en el directorio de inicio del usuario 
 
 
 
-== Aplicar el paquete de actualización
+== Paso 3: aplica el paquete de actualización
 
-Una vez cargado el archivo de actualización en la máquina virtual de implementación, puede aplicar la actualización.
+Después de que subas el archivo de actualización a la máquina virtual de ONTAP Select Deploy, puedes aplicar la actualización.
 
 .Antes de empezar
-Debe saber en qué directorio se encuentra el archivo de actualización en la máquina virtual de la utilidad de implementación. Además, asegúrese de que la implementación no se utilice para realizar otras tareas mientras se realiza la actualización.
+* Verifica en qué directorio se ha colocado el archivo de actualización en la máquina virtual de la utilidad ONTAP Select Deploy.
+* Verifica que ONTAP Select Deploy no se use para realizar ninguna otra tarea mientras se realiza la actualización.
+
 
 .Pasos
-. Sign in en la CLI de la utilidad de implementación mediante SSH con la cuenta de administrador.
+. Inicia sesión en la CLI de la utilidad ONTAP Select Deploy usando SSH con la cuenta de administrador.
 . Realice la actualización utilizando la ruta de directorio y el nombre de archivo adecuados:
 +
-`deploy upgrade -package-path FILEPATH`
-
+[source, cli]
+----
+deploy upgrade -package-path <file_path>
+----
 +
-Ejemplo
+Ejemplo de comando:
 
 +
 ....
@@ -90,4 +90,4 @@ deploy upgrade -package-path /home/admin/ONTAPdeploy2.12_upgrade.tar.gz
 
 
 .Después de terminar
-Antes de completar la actualización, se le solicitará que cree una copia de seguridad de la configuración de la máquina virtual de implementación. Además, debe borrar la caché del navegador para poder ver las páginas de implementación recién creadas.
+Antes de que finalice el procedimiento de actualización, se te pedirá que crees una copia de seguridad de la configuración de la máquina virtual de ONTAP Select Deploy. También deberías borrar la caché del navegador para poder ver las páginas de ONTAP Select Deploy recién creadas.
