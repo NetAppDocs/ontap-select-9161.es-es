@@ -20,6 +20,7 @@ Este procedimiento se basa en la creación de una nueva máquina virtual que uti
 
 
 
+[[back-up-the-deploy-configuration-data]]
 == Realizar una copia de seguridad de los datos de configuración de implementación
 
 Debe crear una copia de seguridad de los datos de configuración de Deploy como parte de la migración de la máquina virtual. También debe crear una copia de seguridad después de implementar un clúster de ONTAP Select . Los datos se guardan en un único archivo cifrado que puede descargar a su estación de trabajo local.
@@ -59,6 +60,7 @@ Puede acceder al archivo de respaldo a través de la URL.
 
 
 
+[[install-a-new-instance-of-the-deploy-virtual-machine]]
 == Instalar una nueva instancia de la máquina virtual Deploy
 
 Debe crear una nueva instancia de la máquina virtual Deploy que pueda actualizar con los datos de configuración de la máquina virtual original.
@@ -84,6 +86,7 @@ link:task_install_deploy.html["Instalar ONTAP Select Implementar"]
 
 
 
+[[restore-the-deploy-configuration-data-to-the-new-virtual-machine]]
 == Restaurar los datos de configuración de implementación en la nueva máquina virtual
 
 Debe restaurar los datos de configuración de la máquina virtual original de la utilidad de implementación a la nueva máquina virtual. Los datos se encuentran en un solo archivo que debe cargar desde su estación de trabajo local.

@@ -18,6 +18,7 @@ Puede adquirir una licencia de nivel de capacidad o grupo de capacidad de ONTAP 
 
 
 
+[[what-a-platform-license-offering-provides]]
 == Qué ofrece una oferta de licencia de plataforma
 
 Una oferta de licencia específica define y restringe las capacidades del host del hipervisor en dos áreas:
@@ -30,12 +31,14 @@ Las ofertas de licencias se organizan en orden ascendente de capacidades, desde 
 
 
 
+[[platform-license-offerings]]
 == Ofertas de licencias de plataforma
 
 Hay tres ofertas de licencias de plataforma disponibles.
 
 
 
+[[standard]]
 === Estándar
 
 La oferta estándar proporciona las siguientes capacidades:
@@ -48,6 +51,7 @@ La oferta estándar proporciona las siguientes capacidades:
 
 
 
+[[premium]]
 === De primera calidad
 
 La oferta premium ofrece las siguientes capacidades:
@@ -61,6 +65,7 @@ La oferta premium ofrece las siguientes capacidades:
 
 
 
+[[premium-xl]]
 === Premium XL
 
 La oferta Premium XL ofrece las siguientes capacidades:
@@ -77,6 +82,7 @@ NOTE: El uso del tipo de instancia grande o de unidades NVMe en una configuraci�
 
 
 
+[[compare-hardware-support-for-platform-license-offerings]]
 == Compare la compatibilidad de hardware para las ofertas de licencias de plataforma
 
 Las licencias estándar, premium y premium XL son compatibles con una amplia gama de hardware y software. Para obtener información actualizada sobre las versiones de hardware y software, consulte link:https://mysupport.netapp.com/matrix/["Herramienta de matriz de interoperabilidad"^] .

@@ -19,6 +19,7 @@ Obtenga información sobre las nuevas características y mejoras en las versione
 
 
 
+[[ontap-select-9-16-1]]
 == ONTAP Select 9.16.1
 
 ONTAP Select 9.16.1 incluye varias características nuevas y mejoras.
@@ -36,6 +37,7 @@ Compatibilidad actualizada con hipervisor KVM:: A partir de ONTAP Select 9.16.1,
 
 
 
+[[ontap-select-9-15-1]]
 == ONTAP Select 9.15.1
 
 ONTAP Select 9.15.1 incluye varias características nuevas y mejoras.
@@ -62,6 +64,7 @@ NOTE: El soporte para la expansión y contracción de clústeres está limitado 
 
 
 
+[[ontap-select-9-14-1]]
 == ONTAP Select 9.14.1
 
 ONTAP Select 9.14.1 incluye varias características nuevas y mejoras.
@@ -74,6 +77,7 @@ Compatibilidad mejorada con VMware ESXi:: ONTAP Select 9.14.1 incluye soporte pa
 
 
 
+[[ontap-select-9-13-1]]
 == ONTAP Select 9.13.1
 
 ONTAP Select 9.13.1 incluye varias características nuevas y mejoras.
@@ -85,6 +89,7 @@ Compatibilidad actualizada con ONTAP Select Deploy:: A partir de abril de 2024, 
 
 
 
+[[ontap-select-9-12-1]]
 == ONTAP Select 9.12.1
 
 ONTAP Select 9.12.1 se beneficia de la mayoría de las novedades de la versión actual del producto principal de ONTAP . No incluye nuevas funciones ni mejoras específicas de ONTAP Select.
@@ -93,6 +98,7 @@ A partir de abril de 2024, ONTAP Select Deploy 9.12.1 ya no está disponible en 
 
 
 
+[[ontap-select-9-11-1]]
 == ONTAP Select 9.11.1
 
 ONTAP Select 9.11.1 incluye varias características nuevas y mejoras.
@@ -123,6 +129,7 @@ NetApp recomienda encarecidamente a sus clientes que planifiquen y ejecuten una 
 
 
 
+[[ontap-select-9-10-1]]
 == ONTAP Select 9.10.1
 
 ONTAP Select 9.10.1 incluye varias características nuevas y mejoras.
@@ -150,6 +157,7 @@ El hipervisor KVM ya no es compatible:: A partir de ONTAP Select 9.10.1, ya no e
 
 
 
+[[ontap-select-9-9-1]]
 == ONTAP Select 9.9.1
 
 ONTAP Select 9.9.1 incluye varias características nuevas y mejoras.
@@ -167,6 +175,7 @@ Compatibilidad actualizada con VMware ESXi:: La compatibilidad con VMware ESXi s
 
 
 
+[[ontap-select-9-8]]
 == ONTAP Select 9.8
 
 Hay varias características nuevas y modificadas incluidas en ONTAP Select 9.8.

@@ -18,6 +18,7 @@ Si la utilidad ONTAP Select Deploy falla o deja de estar disponible por algún m
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 Debe prepararse antes de intentar recuperar una instancia de la utilidad Implementar para garantizar el éxito.
@@ -58,6 +59,7 @@ Debe decidir qué procedimiento usar al recuperar una instancia de la utilidad d
 |===
 
 
+[[restore-a-deploy-utility-instance-using-a-configuration-backup]]
 == Restaurar una instancia de la utilidad de implementación mediante una copia de seguridad de la configuración
 
 Si tiene una copia de seguridad de la instancia de la utilidad de implementación fallida que contiene el clúster de dos nodos, puede restaurar los datos de configuración en la nueva instancia de la máquina virtual de implementación. A continuación, debe completar la recuperación configurando adicionalmente los dos nodos del clúster de ONTAP Select .
@@ -119,6 +121,7 @@ Si utiliza licencias de grupos de capacidad, debe reinstalar cada licencia de gr
 
 
 
+[[reconfigure-and-recover-a-deploy-utility-instance]]
 == Reconfigurar y recuperar una instancia de la utilidad de implementación
 
 Si no tiene una copia de seguridad de la instancia de la utilidad de implementación fallida que contiene el clúster de dos nodos, debe configurar el destino iSCSI y el buzón del mediador en la nueva máquina virtual de implementación. A continuación, debe completar la recuperación configurando adicionalmente los dos nodos del clúster de ONTAP Select .

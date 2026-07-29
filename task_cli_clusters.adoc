@@ -18,6 +18,7 @@ Hay varias tareas relacionadas que puede realizar para administrar un clúster d
 
 
 
+[[delete-an-ontap-select-clusters]]
 == Eliminar un clúster de ONTAP Select
 
 Puede eliminar un clúster de ONTAP Select cuando ya no sea necesario mediante la interfaz de línea de comandos.
