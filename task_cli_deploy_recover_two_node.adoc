@@ -214,6 +214,6 @@ Si utiliza licencias de grupos de capacidad, debe reinstalar cada licencia de gr
 
 .Información relacionada
 * link:task_install_deploy.html["Instalar ONTAP Select Implementar"]
-* link:task_cli_migrate_deploy.html#restoring-the-deploy-configuration-data-to-the-new-virtual-machine["Restaurar los datos de configuración de implementación en la nueva máquina virtual"]
-* link:task_adm_licenses.html#reinstalling-a-capacity-pool-license["Reinstalar una licencia de Capacity Pool"]
+* link:task_cli_migrate_deploy.html#restore-the-deploy-configuration-data-to-the-new-virtual-machine["Restaurar los datos de configuración de implementación en la nueva máquina virtual"]
+* link:task_adm_licenses.html#reinstall-a-capacity-pool-license["Reinstalar una licencia de Capacity Pool"]
 
